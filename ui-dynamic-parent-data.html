@@ -1,0 +1,17 @@
+<head>
+  <title>ui-dynamic-parent-data</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#with firstData}}
+  {{> UI.dynamic template=someTemplate data=otherData}}
+  {{/with}}
+</template>
+
+<template name="foo">
+  {{debug .. ../.. ../../..}}
+</template>
